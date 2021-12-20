@@ -20,7 +20,7 @@ namespace TestProject1
         [InlineData("b")]
         [InlineData("c")]
         [InlineData("d")]
-        public void Test2chubatova(string str)
+        public void Test2chubatova1(string str)
         {
             Assert.Equal("a", "a");
         }
@@ -39,7 +39,7 @@ namespace TestProject1
         [InlineData("b")]
         [InlineData("c")]
         [InlineData("d")]
-        public void Test2chubatova(string str)
+        public void Test2chubatova2(string str)
         {
             Assert.Equal(str, "a");
         }
