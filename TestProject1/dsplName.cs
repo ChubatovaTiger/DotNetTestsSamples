@@ -9,8 +9,8 @@ namespace TestProject1
 {
     public class dsplNameXunit1
     {
-        [Fact(DisplayName = "dpNameChubatova1")]
-        public void Test1chubatova()
+        [Fact(DisplayName = "dpNameChubatova12")]
+        public void Test1chubatova2()
         {
             Assert.Equal("a", "b");
         }
@@ -29,8 +29,8 @@ namespace TestProject1
     
     public class dsplNameXunit2
     {
-        [Fact(DisplayName = "dpNameChubatova3")]
-        public void Test1chubatova()
+        [Fact(DisplayName = "dpNameChubatova32")]
+        public void Test2chubatova2()
         {
         }
 
