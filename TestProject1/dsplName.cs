@@ -15,12 +15,12 @@ namespace TestProject1
             Assert.Equal("a", "b");
         }
 
-        [Theory(DisplayName = "dpNameChubatovaTigertheory1")]
+        [Theory]
         [InlineData("a")]
         [InlineData("b")]
         [InlineData("c")]
         [InlineData("d")]
-        public void Test2chubatovaTheory1(string str)
+        public void Test2chubatovaTheory1noDspl(string str)
         {
             Assert.Equal("a", "a");
         }
@@ -34,12 +34,12 @@ namespace TestProject1
         {
         }
 
-        [Theory(DisplayName = "dpNameChubatovaTigerTeory2")]
+        [Theory]
         [InlineData("a")]
         [InlineData("b")]
         [InlineData("c")]
         [InlineData("d")]
-        public void Test2chubatovaTheory2(string str)
+        public void Test2chubatovaTheory2noDspl(string str)
         {
             Assert.Equal(str, "a");
         }
