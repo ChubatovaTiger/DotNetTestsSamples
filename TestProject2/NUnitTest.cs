@@ -1,18 +1,16 @@
-using NUnit.Framework;
-
 namespace TestProject2
 {
-    public class UnitTest12
+    public class NUnitTest1wthDisplN
     {
 
-        [Test]
 
-        public void VerySimpleTest2()
-        {
-            Assert.Fail();
-        }
-              
-              
+[TestCase(5,TestName="dsplNameNUNitver123")]
+public void TestCasewithDsplMNameNunitver1() {
+    Assert.AreEqual(5, 4);
+}
+
+        
+        
         
     }
 }
