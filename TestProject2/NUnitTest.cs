@@ -2,12 +2,12 @@ using NUnit.Framework;
 
 namespace TestProject2
 {
-    public class UnitTest1
+    public class UnitTest12
     {
 
         [Test]
 
-        public void VerySimpleTest()
+        public void VerySimpleTest2()
         {
             Assert.Fail();
         }
