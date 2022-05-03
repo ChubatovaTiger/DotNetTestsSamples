@@ -9,11 +9,10 @@
     
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
-
-        <IsPackable>false</IsPackable>
     </PropertyGroup>
 
-
+  <Target Name="Greet">
+    <SayHello />
+  </Target>
 
 </Project>
