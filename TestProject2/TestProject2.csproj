@@ -1,5 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
+<ItemDefinitionGroup>
 
+  <PostBuildEvent>
+    <Command>npm install</Command>
+    <Message>installing npm packages from postbuild event csproj </Message>
+  </PostBuildEvent>
+</ItemDefinitionGroup>
+    
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
