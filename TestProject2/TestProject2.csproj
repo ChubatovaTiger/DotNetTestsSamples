@@ -1,4 +1,4 @@
-<Project Sdk="C:\Program Files\dotnet\sdk\6.0.202\Microsoft.NET.Sdk\Sdks">
+<Project Sdk="C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk">
 <ItemDefinitionGroup>
 
   <PostBuildEvent>
