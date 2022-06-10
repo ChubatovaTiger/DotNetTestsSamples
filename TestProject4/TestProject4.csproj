@@ -1,8 +1,0 @@
-<Project>
-    <Target Name="Abc">
-        <Message Importance="high" Text="##teamcity[publishArtifacts 'aaa.txt => .']" />
-    </Target>
-        <Target Name="CBA">
-        <Message Importance="high" Text="##teamcity[buildNumber 'ha']" />
-    </Target>
-</Project>
