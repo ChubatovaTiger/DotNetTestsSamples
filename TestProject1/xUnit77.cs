@@ -19,7 +19,7 @@ namespace TestProject1
         [InlineData("b")]
         public void Test2(string str)
         {
-			
+			Assert.False(false, str);
         }
     }
 }
