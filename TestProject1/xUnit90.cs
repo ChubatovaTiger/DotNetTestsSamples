@@ -9,15 +9,16 @@ namespace TestProject1
 {
     public class UnitTest90
     {
-        
+        [Fact]
         public void Test1()
         {
+			Assert.False(false, "1");
         }
 
         [Fact]
-        public void Test2(string str)
+        public void Test2()
         {
-			Assert.False(false, str);
+			Assert.False(false, "2");
         }
     }
 }
