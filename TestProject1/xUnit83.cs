@@ -9,14 +9,12 @@ namespace TestProject1
 {
     public class UnitTest83
     {
-        [Fact]
+        
         public void Test1()
         {
         }
 
-        [Theory]
-        [InlineData("a")]
-        [InlineData("b")]
+        [Fact]
         public void Test2(string str)
         {
 			Assert.False(false, str);
