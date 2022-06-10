@@ -7,7 +7,7 @@ using Xunit;
 
 namespace TestProject1
 {
-    public class UnitTest26
+    public class UnitTest
     {
         [Fact]
         public void Test1()
@@ -19,7 +19,7 @@ namespace TestProject1
         [InlineData("b")]
         public void Test2(string str)
         {
-			Console.WriteLine(str);
+			
         }
     }
 }
