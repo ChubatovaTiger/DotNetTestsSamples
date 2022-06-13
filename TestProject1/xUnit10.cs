@@ -14,7 +14,7 @@ namespace TestProject1
         public void Test1()
         {
 			Assert.False(false, "1");
-			 Thread.Sleep(500);
+			 Thread.Sleep(600);
         }
 
         [Fact]
