@@ -2,6 +2,4 @@ hi
 ss
 cc
 s
-1
-2s
-2
+s
