@@ -4,6 +4,4 @@ w
 s
 s
 s
-2
-ss
-ss
+f
