@@ -6,7 +6,3 @@ s
 sd
 n
 j
-d
-s
-zxc
-zxc
