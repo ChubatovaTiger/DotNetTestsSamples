@@ -13,7 +13,7 @@ namespace TestProject7
         [Fact]
         public void Test1()
         {
-             Thread.Sleep(600);
+             Thread.Sleep(60);
         }
 
         [Theory]
