@@ -3,21 +3,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics.Contracts;
 using Xunit;
+using System.Threading;
 
 
 namespace TestProject1
 {
-    public class UnitTestUnitTestUnitTestUnitTestUnitTestUnitTestUnitTestUnitTestUnitTestUnitTestUnitTestUnitTestUnitTest970
+    public class UnitTest970
     {
-        [Fact]
+       [Fact]
         public void Test1()
         {
         }
-
-        [Theory]
-        [InlineData("a")]
-        [InlineData("b")]
-        public void Test2(string str)
+        [Fact]
+        public void Test2()
+        {
+        }
+        [Fact]
+        public void Test3()
+        {
+        }
+        [Fact]
+        public void Test4()
+        {
+        }
+        [Fact]
+        public void Test5()
+        {
+        }
+        [Fact]
+        public void Test6()
+        {
+        }
+        [Fact]
+        public void Test7()
+        {
+        }
+        [Fact]
+        public void Test8()
+        {
+        }
+        [Fact]
+        public void Test9()
+        {
+        }
+        [Fact]
+        public void Test10()
         {
         }
     }
