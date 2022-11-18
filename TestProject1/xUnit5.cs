@@ -14,7 +14,7 @@ namespace TestProject1
        [Fact]
         public void Test1()
         {
-Thread.Sleep(500);
+Thread.Sleep(501);
         }
         [Fact]
         public void Test2()
