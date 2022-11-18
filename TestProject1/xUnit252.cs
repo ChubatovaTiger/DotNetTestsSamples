@@ -14,60 +14,60 @@ namespace TestProject1
        [Fact]
         public void Test1()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
         }
         [Fact]
         public void Test2()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
         [Fact]
         public void Test3()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
         [Fact]
         public void Test4()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
         [Fact]
         public void Test5()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
         [Fact]
         public void Test6()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
         [Fact]
         public void Test7()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
         [Fact]
         public void Test8()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
         [Fact]
         public void Test9()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
         [Fact]
         public void Test10()
         {
-Thread.Sleep(50);
+Thread.Sleep(500);
      
         }
     }
