@@ -9,6 +9,7 @@
         <IsPackable>false</IsPackable>
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
         <OutputType>Exe</OutputType>
+        <RunSettingsFilePath>example.runsettings</RunSettingsFilePath>
     </PropertyGroup>
 <Target Name="VSTest" >
     <Message Text="No tests because this is a sample project" />
