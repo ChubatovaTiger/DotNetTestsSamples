@@ -3,4 +3,8 @@
 <RunConfiguration>
     <ResultsDirectory>.\TestResults</ResultsDirectory>
 </RunConfiguration>
+    <TestRunParameters>
+    <Parameter name="webAppUrl" value="http://localhost" />
+    <Parameter name="docsUrl" value="https://learn.microsoft.com" />
+</TestRunParameters>
 </RunSettings>
