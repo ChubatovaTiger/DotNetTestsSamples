@@ -14,13 +14,12 @@ namespace TestProject1
     public class UnitTest0
     {
         
-        private string _appUrl;
-public TestContext TestContext { get; set; }
+
         
        [Fact]
         public void Test1()
         {
-            string _appUrl = TestContext.Properties["webAppUrl"];
+
         }
         [Fact]
         public void Test2()
