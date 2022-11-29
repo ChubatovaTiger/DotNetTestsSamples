@@ -6,14 +6,17 @@ using Xunit;
 using System.Threading;
 
 
-private string _appUrl;
-public TestContext TestContext { get; set; }
+
 
 
 namespace TestProject1
 {
     public class UnitTest0
     {
+        
+        private string _appUrl;
+public TestContext TestContext { get; set; }
+        
        [Fact]
         public void Test1()
         {
