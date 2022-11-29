@@ -6,6 +6,10 @@ using Xunit;
 using System.Threading;
 
 
+private string _appUrl;
+public TestContext TestContext { get; set; }
+
+
 namespace TestProject1
 {
     public class UnitTest0
@@ -13,6 +17,7 @@ namespace TestProject1
        [Fact]
         public void Test1()
         {
+            string _appUrl = TestContext.Properties["webAppUrl"];
         }
         [Fact]
         public void Test2()
