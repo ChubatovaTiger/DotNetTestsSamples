@@ -2,5 +2,6 @@
 <RunSettings>
    <NUnit>
        <PreFilter>true</PreFilter>
+      <ResultsDirectory>results</ResultsDirectory>
    </NUnit>
 </RunSettings>
