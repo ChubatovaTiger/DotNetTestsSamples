@@ -8,27 +8,18 @@ using Xunit;
 
 namespace TestProject1
 {
-        
-            public class TestData {
-      int Base {get;set;}
-      int Exponent {get;set;}
-      int ExpectedResult {get;set;}
-    }
-        
-        public class TestDataGenerator : IEnumerable<object[]>
+public class TestDataGenerator : IEnumerable<object[]>
 {
-    public  List<TestData> PowerOfTestData() {
-        yield return new TestData { Base = 0, Exponent = 0, TestData = 0 };
-        yield return new TestData { Base = 0, Exponent = 1, TestData = 0 };
-        yield return new TestData { Base = 2, Exponent = 0, TestData = 1 };
-        yield return new TestData { Base = 2, Exponent = 1, TestData = 2 };
-        yield return new TestData { Base = 5, Exponent = 2, TestData = 25 };
-    }
-        public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
+    private readonly List<object[]> _data = new List<object[]>
+    {
+        new object[] {5, 1, 3, 9000},
+        new object[] {7, 1, 5, 3}
+    };
+
+    public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
-
 
 public class ParameterizedTests
 {
@@ -39,7 +30,7 @@ public class ParameterizedTests
 
     [Theory]
     [ClassData(typeof(TestDataGenerator))]
-    public void AllNumbers_AreOdd_WithClassData(int a, int b, int c)
+    public void AllNumbers_AreOdd_WithClassData(int a, int b, int c, int d)
     {
         Assert.True(IsOddNumber(a));
         Assert.True(IsOddNumber(b));
