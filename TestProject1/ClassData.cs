@@ -13,11 +13,8 @@ public class TestDataGenerator : IEnumerable<object[]>
     private readonly List<object[]> _data = new List<object[]>
     {
     
-    for (int i = 0; i < 5; i++) 
-{
-        new object[] {i, 1, 3, 9000}
-}
-
+ new object[] {5, 1, 3, 9000},
+        new object[] {7, 1, 5, 3}
     };
 
     public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
