@@ -21,7 +21,7 @@ namespace TestProject1
         {
             public IEnumerator<object[]> GetEnumerator()
             {
-                for (int i = 0; i < 500; i++)
+                for (int i = 0; i < 50000; i++)
                 {
                     yield return new object[] { new Employee { FirstName = i.ToString(), LastName = i.ToString() } };
                 }
