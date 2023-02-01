@@ -12,8 +12,8 @@ public class TestDataGenerator : IEnumerable<object[]>
 {
     private readonly List<object[]> _data = new List<object[]>
     {
-       List.Add(5);
-       List.Add(6);
+       List.Add({5});
+       List.Add({6});
     };
 
     public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
