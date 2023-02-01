@@ -37,7 +37,7 @@ namespace TestProject1
         public void myTest(Employee employee)
         {
             //var Act = new Func<string>(() => _unitUnderTest.GetFullName(employee.FirstName, employee.LastName));
-            Assert.Equal(employee.FirstName, employee.LastName);
+            Assert.Equal(employee.FirstName, "a");
         }
     }
 }
