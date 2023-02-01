@@ -17,7 +17,7 @@ namespace TestProject1
         
         public class TestDataGenerator : IEnumerable<object[]>
 {
-    private readonly  List<TestData> PowerOfTestData() {
+    public  List<TestData> PowerOfTestData() {
         yield return new TestData { Base = 0, Exponent = 0, TestData = 0 };
         yield return new TestData { Base = 0, Exponent = 1, TestData = 0 };
         yield return new TestData { Base = 2, Exponent = 0, TestData = 1 };
