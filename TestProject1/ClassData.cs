@@ -15,25 +15,20 @@ namespace TestProject1
       int ExpectedResult {get;set;}
     }
         
-public List<TestData> PowerOfTestData() {
+        public class TestDataGenerator : IEnumerable<object[]>
+{
+    private readonly  List<TestData> PowerOfTestData() {
         yield return new TestData { Base = 0, Exponent = 0, TestData = 0 };
         yield return new TestData { Base = 0, Exponent = 1, TestData = 0 };
         yield return new TestData { Base = 2, Exponent = 0, TestData = 1 };
         yield return new TestData { Base = 2, Exponent = 1, TestData = 2 };
         yield return new TestData { Base = 5, Exponent = 2, TestData = 25 };
     }
-        
-        class PowerOfTestDataClass : TheoryData<int, int, int>
-{
-    public PowerOfTestDataClass()
-    {
-       Add(0, 0, 0);
-       Add(0, 1, 0);
-       Add(2, 0, 1);
-       Add(2, 1, 2);
-       Add(5, 2, 25);
-    }
+        public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
+
 
 public class ParameterizedTests
 {
@@ -43,7 +38,7 @@ public class ParameterizedTests
     }
 
     [Theory]
-    [ClassData(typeof(PowerOfTestDataClass))]
+    [ClassData(typeof(TestDataGenerator))]
     public void AllNumbers_AreOdd_WithClassData(int a, int b, int c)
     {
         Assert.True(IsOddNumber(a));
