@@ -18,7 +18,7 @@ namespace TestProject1
 
  [Theory]
         [MemberData("enumValues")]
-        public void TestNumberGeneric(Number number)
+        public void TestNumberGeneric(int number)
         {
             Assert.Equal(true, (Convert.ToInt32(number) > 0));
         }
