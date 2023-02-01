@@ -8,20 +8,22 @@ using Xunit;
 
 namespace TestProject1
 {
-public class TestDataGenerator : IEnumerable<object[]>
-{
-    private readonly List<object[]> _data = new List<object[]>
+public class EmployeeTestData:IEnumerable<object[]>
     {
-    
- new object[] {5, 1, 3, 9000},
-        new object[] {7, 1, 5, 3}
-    };
-
-    public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
-
-    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-}
-
+        public IEnumerator<object[]> GetEnumerator()
+        {
+            yield return new object[] { new Employee { Id = 1, FirstName = "John", LastName = "" } };
+            yield return new object[] { new Employee { Id = 2, FirstName = "Mary", LastName = null } };
+            yield return new object[] { new Employee { Id = 3, FirstName = "Mary", LastName = null } };
+            yield return new object[] { new Employee { Id = 4, FirstName = "", LastName = null } };
+            yield return new object[] { new Employee { Id = 5, FirstName = "", LastName = "john" } };
+            yield return new object[] { new Employee { Id = 6, FirstName = null, LastName = " " } };
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
 public class ParameterizedTests
 {
     public bool IsOddNumber(int number)
@@ -30,13 +32,11 @@ public class ParameterizedTests
     }
 
     [Theory]
-    [ClassData(typeof(TestDataGenerator))]
-    public void AllNumbers_AreOdd_WithClassData(int a, int b, int c, int d)
-    {
-        Assert.True(IsOddNumber(a));
-        Assert.True(IsOddNumber(b));
-        Assert.True(IsOddNumber(c));
-        Assert.True(IsOddNumber(d));
-    }
+    [ClassData(typeof(EmployeeTestData))]
+public void Employee_GetFullName_Throw_ArgumentNullException_When_FirstName_Is(Employee employee)
+        {
+            var Act = new Func<string>(() => _unitUnderTest.GetFullName(employee.FirstName, employee.LastName));
+            Assert.Throws<ArgumentNullException>(Act);
+        }
 }
 }
