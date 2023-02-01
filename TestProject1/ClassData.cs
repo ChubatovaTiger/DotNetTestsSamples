@@ -6,8 +6,7 @@ using System.Diagnostics.Contracts;
 using Xunit;
 
 
-namespace TestProject1
-{
+
     public static IEnumerable<object[]> enumValues()
         {
             for (int i = 0; i < 5; i++)
@@ -22,4 +21,3 @@ namespace TestProject1
         {
             Assert.Equal(true, (Convert.ToInt32(number) > 0));
         }
-}
