@@ -4,39 +4,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics.Contracts;
 using Xunit;
+using System;
 
 
 namespace TestProject1
 {
-public class TestDataGenerator : IEnumerable<object[]>
-{
-    private readonly List<object[]> _data = new List<object[]>
+    public class Tests
     {
-        new object[] {5, 1, 3, 9000},
-        new object[] {7, 1, 5, 3}
-    };
-    List.add({5, 1, 3, 9000});
+        public class Employee
+        {
+            public string FirstName;
+            public string LastName;
 
-    public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
+        }
+        public class EmployeeTestData : IEnumerable<object[]>
+        {
+            public IEnumerator<object[]> GetEnumerator()
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    yield return new object[] { new Employee { FirstName = i.ToString(), LastName = i.ToString() } };
+                }
+            }
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                return GetEnumerator();
+            }
+        }
 
-    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-}
-
-public class ParameterizedTests
-{
-    public bool IsOddNumber(int number)
-    {
-        return number % 2 != 0;
+        [Theory]
+        [ClassData(typeof(EmployeeTestData))]
+        public void myTest(Employee employee)
+        {
+            //var Act = new Func<string>(() => _unitUnderTest.GetFullName(employee.FirstName, employee.LastName));
+            Assert.Equal(employee.FirstName, employee.LastName);
+        }
     }
-
-    [Theory]
-    [ClassData(typeof(TestDataGenerator))]
-    public void AllNumbers_AreOdd_WithClassData(int a, int b, int c, int d)
-    {
-        Assert.True(IsOddNumber(a));
-        Assert.True(IsOddNumber(b));
-        Assert.True(IsOddNumber(c));
-        Assert.True(IsOddNumber(d));
-    }
-}
 }

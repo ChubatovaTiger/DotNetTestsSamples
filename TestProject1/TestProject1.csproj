@@ -10,7 +10,7 @@
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
         <OutputType>Exe</OutputType>
     </PropertyGroup>
-<Target Name="VSTest" >
+<Target Name="VSTest">
     <Message Text="No tests because this is a sample project" />
 </Target>
     <ItemGroup>
