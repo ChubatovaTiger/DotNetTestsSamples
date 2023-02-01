@@ -13,8 +13,8 @@ public class EmployeeTestData:IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {
-            yield return new object[] { 5 };
-            yield return new object[] { 6 };
+            yield return new object[] {5, 1, 3, 9000};
+            yield return new object[] {6, 1, 3, 9000};
 
         }
         IEnumerator IEnumerable.GetEnumerator()
@@ -32,7 +32,7 @@ public class ParameterizedTests
     
 [Theory]
     [ClassData(typeof(EmployeeTestData))]
-    public void Employee_GetFullName_Throw_ArgumentNullException_When_FirstName_Is(int a)
+    public void Employee_GetFullName_Throw_ArgumentNullException_When_FirstName_Is(int a, int b, int c, int d)
         {
         Assert.True(IsOddNumber(a));
         }
