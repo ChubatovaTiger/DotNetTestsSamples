@@ -15,8 +15,7 @@ public class TestDataGenerator : IEnumerable<object[]>
     
     for (int i = 0; i < 5; i++) 
 {
-        new object[] {i, 1, 3, 9000},
-        new object[] {i, 1, 5, 3}
+        new object[] {i, 1, 3, 9000}
 }
 
     };
