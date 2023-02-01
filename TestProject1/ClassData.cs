@@ -8,6 +8,7 @@ using Xunit;
 
 namespace TestProject1
 {
+    
 public class EmployeeTestData:IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
@@ -25,18 +26,15 @@ public class EmployeeTestData:IEnumerable<object[]>
         }
     }
 public class ParameterizedTests
+    
 {
-    public bool IsOddNumber(int number)
-    {
-        return number % 2 != 0;
-    }
-
-    [Theory]
+[Theory]
     [ClassData(typeof(EmployeeTestData))]
-public void Employee_GetFullName_Throw_ArgumentNullException_When_FirstName_Is(Employee employee)
+    public void Employee_GetFullName_Throw_ArgumentNullException_When_FirstName_Is(Employee employee)
         {
             var Act = new Func<string>(() => _unitUnderTest.GetFullName(employee.FirstName, employee.LastName));
             Assert.Throws<ArgumentNullException>(Act);
         }
 }
+    
 }
