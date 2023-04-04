@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 
 [TestFixture(1, 2, TypeArgs = new Type[] { typeof(int), typeof(int) })]
-public class nUNitWithDisplayName(int a, int b)
+public class nUNitWithDisplayName<T1, T2>
 {
     private T1 customerType;
     private T2 minOrder;
