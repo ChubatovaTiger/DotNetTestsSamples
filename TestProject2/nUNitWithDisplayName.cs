@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Threading;
 
-[TestFixture(1, 1, TypeArgs = new Type[] { typeof(int), typeof(int) })]
+[TestFixture(1, 2, TypeArgs = new Type[] { typeof(int), typeof(int) })]
 public class nUNitWithDisplayName<T1, T2>
 {
     private T1 customerType;
