@@ -2,22 +2,46 @@ using NUnit.Framework;
 using System;
 using System.Threading;
 
-[TestFixture(1, 1, TypeArgs = new Type[] { typeof(int), typeof(int) })]
-public class NUnitTest<T1, T2>
+[TestFixture("hello", "hello", "goodbye")]
+[TestFixture("zip", "zip")]
+[TestFixture(42, 42, 9)]
+public class NUnitTest
 {
-    private T1 customerType;
-    private T2 minOrder;
+    private readonly string _eq1;
+    private readonly string _eq2;
+    private readonly string _neq;
 
-    public NUnitTest(T1 customerType, T2 minOrder)
+    public NUnitTest(string eq1, string eq2, string neq)
     {
-        this.customerType = customerType;
-        this.minOrder = minOrder;
+        _eq1 = eq1;
+        _eq2 = eq2;
+        _neq = neq;
     }
 
-    [TestCase]
-    public void TestMethod()
+    public NUnitTest(string eq1, string eq2)
+        : this(eq1, eq2, null) { }
+
+    public NUnitTest(int eq1, int eq2, int neq)
     {
-        Assert.That(customerType, Is.TypeOf<int>());
-        Assert.That(minOrder, Is.TypeOf<int>());
+        _eq1 = eq1.ToString();
+        _eq2 = eq2.ToString();
+        _neq = neq.ToString();
+    }
+
+    [Test]
+    public void TestEquality()
+    {
+        Assert.That(_eq2, Is.EqualTo(_eq1));
+        Assert.That(_eq2.GetHashCode(), Is.EqualTo(_eq1.GetHashCode()));
+    }
+
+    [Test]
+    public void TestInequality()
+    {
+        Assert.That(_neq, Is.Not.EqualTo(_eq1));
+        if (_neq != null)
+        {
+            Assert.That(_neq.GetHashCode(), Is.Not.EqualTo(_eq1.GetHashCode()));
+        }
     }
 }
