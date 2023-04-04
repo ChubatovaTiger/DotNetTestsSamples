@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 
 [TestFixture(1, 1, TypeArgs = new Type[] { typeof(int), typeof(int) })]
-public class NUnitTest2<T1, T2>
+public class NUnitTest2
 {
     private T1 customerType;
     private T2 minOrder;
