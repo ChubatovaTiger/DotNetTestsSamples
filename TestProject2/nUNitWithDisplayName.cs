@@ -8,7 +8,7 @@ public class nUNitWithDisplayName(int a, int b)
     private T1 customerType;
     private T2 minOrder;
 
-    public nUNitWithDisplayName(T1 customerType, T2 minOrder)
+    public nUNitWithDisplayName<T1,T2>
     {
         this.customerType = customerType;
         this.minOrder = minOrder;
