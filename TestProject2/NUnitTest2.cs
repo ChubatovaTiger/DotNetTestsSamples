@@ -8,7 +8,7 @@ public class NUnitTest2<T1, T2>
     private T1 customerType;
     private T2 minOrder;
 
-    public CustomerOrderServiceTests(T1 customerType, T2 minOrder)
+    public NUnitTest2(T1 customerType, T2 minOrder)
     {
         this.customerType = customerType;
         this.minOrder = minOrder;
