@@ -4,7 +4,7 @@ using System.Threading;
 
 [TestFixture("hello", "hello", "goodbye")]
 [TestFixture("zip", "zip")]
-[TestFixture(42, 42, 99)]
+[TestFixture(42, 42, 9)]
 public class nUNitWithDisplayName
 {
     private readonly string _eq1;
