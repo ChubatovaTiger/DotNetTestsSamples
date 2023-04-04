@@ -2,58 +2,22 @@ using NUnit.Framework;
 using System;
 using System.Threading;
 
-namespace TestProject2
+[TestFixture(1, 1, TypeArgs = new Type[] { typeof(int), typeof(int) })]
+public class NUnitTest<T1, T2>
 {
-    public class UnitTest1
+    private T1 customerType;
+    private T2 minOrder;
+
+    public NUnitTest(T1 customerType, T2 minOrder)
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
- //[Ignore("Ignore a test")]
-        [Test]
-        public void Test1NunitSimplever1()
-        {
-            Thread.Sleep(20);
-            Assert.Fail();
-        }
-        
-         //[Ignore("Ignore a test")]
-        [Test]
-         [Category("Short")]
-        [TestCase("chrome", "72.0", "Windows 10")]
-        [TestCase("internet explorer", "11.0", "Windows 10")]
-        public void Test2(string str1, string str2, string str3)
-        {
-            Thread.Sleep(20);
-            Assert.Pass();
-        }
-        
+        this.customerType = customerType;
+        this.minOrder = minOrder;
+    }
 
-         //[Ignore("Ignore a test")]
-        [Test, Sequential]
-         [Category("Long")]
-        public void NunitSequentialParametersTest(
-         [Values(1,2,3)] int x,
-        [Values("A","B")] string s)
-        {
-            Thread.Sleep(20);
-         Assert.Pass();
-        }
-
-     //[Ignore("Ignore a test")]    
-[Test]
-[Category("Long")]
-public void NUnitRangeTest(
-    [Values(1, 2, 3)] int x,
-    [Range(2, 6, 2)] double d)
-{
-    Thread.Sleep(20);
-    Assert.Pass();
-}
-     
-        
-        
-        
+    [TestCase]
+    public void TestMethod()
+    {
+        Assert.That(customerType, Is.TypeOf<int>());
+        Assert.That(minOrder, Is.TypeOf<int>());
     }
 }
