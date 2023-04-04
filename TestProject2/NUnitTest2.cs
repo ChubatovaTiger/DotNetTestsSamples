@@ -2,27 +2,22 @@ using NUnit.Framework;
 using System;
 using System.Threading;
 
-[TestFixture(100.0, 42, TypeArgs = new[] { typeof(double), typeof(int) })]
-[TestFixture(42, 100.0, TypeArgs = new[] { typeof(int), typeof(double) })]
-
+[TestFixture(CustomerType.Premium, 100.00, TypeArgs = new Type[] { typeof(CustomerType), typeof(double) })]
 public class NUnitTest2<T1, T2>
 {
-    private readonly T1 _t1;
-    private readonly T2 _t2;
+    private T1 customerType;
+    private T2 minOrder;
 
-    public SpecifyTypeArgsSeparately(T1 t1, T2 t2)
+    public CustomerOrderServiceTests(T1 customerType, T2 minOrder)
     {
-        _t1 = t1;
-        _t2 = t2;
+        this.customerType = customerType;
+        this.minOrder = minOrder;
     }
 
-    [TestCase(5, 7)]
-    public void TestMyArgTypes(T1 t1, T2 t2)
+    [TestCase]
+    public void TestMethod()
     {
-        Assert.That(t1, Is.TypeOf<T1>());
-        Assert.That(t1, Is.LessThan(_t1));
-
-        Assert.That(t2, Is.TypeOf<T2>());
-        Assert.That(t2, Is.LessThan(_t2));
+        Assert.That(customerType, Is.TypeOf<CustomerType>());
+        Assert.That(minOrder, Is.TypeOf<double>());
     }
 }
