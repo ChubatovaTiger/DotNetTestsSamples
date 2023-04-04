@@ -1,18 +1,23 @@
 using NUnit.Framework;
+using System;
+using System.Threading;
 
-namespace TestProject2
+[TestFixture(1, 1, TypeArgs = new Type[] { typeof(int), typeof(int) })]
+public class nUNitWithDisplayName<T1, T2>
 {
-    public class NUnitTest1wthDisplN
+    private T1 customerType;
+    private T2 minOrder;
+
+    public nUNitWithDisplayName(T1 customerType, T2 minOrder)
     {
+        this.customerType = customerType;
+        this.minOrder = minOrder;
+    }
 
-
-[TestCase(5,TestName="dsplNameNUNitver1")]
-public void TestCasewithDsplMNameNunitver1() {
-    Assert.AreEqual(5, 4);
-}
-
-        
-        
-        
+    [TestCase]
+    public void TestMethod()
+    {
+        Assert.That(customerType, Is.TypeOf<int>());
+        Assert.That(minOrder, Is.TypeOf<int>());
     }
 }
