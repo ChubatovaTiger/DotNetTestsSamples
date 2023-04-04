@@ -12,7 +12,7 @@ namespace TestProject2
         }
  //[Ignore("Ignore a test")]
         [Test]
-        public void Test1NunitSimplever1()
+        public void Test1NunitSimplever1(a)()
         {
             Thread.Sleep(11);
             Assert.Fail();
