@@ -46,7 +46,7 @@ namespace TestProject2
 [Category("Long")]
 public void NUnitRangeTest(
     [Values(1, 2, 3)] int x,
-    [Range(0.2, 0.6, 0.2)] double d)
+    [Range(2, 6, 2)] double d)
 {
     Thread.Sleep(20);
     Assert.Pass();
