@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Threading;
 
-[TestFixture(CustomerType.Premium, 100.00, TypeArgs = new Type[] { typeof(CustomerType), typeof(double) })]
+[TestFixture(1, 1, TypeArgs = new Type[] { typeof(int), typeof(int) })]
 public class NUnitTest2<T1, T2>
 {
     private T1 customerType;
@@ -17,7 +17,7 @@ public class NUnitTest2<T1, T2>
     [TestCase]
     public void TestMethod()
     {
-        Assert.That(customerType, Is.TypeOf<CustomerType>());
-        Assert.That(minOrder, Is.TypeOf<double>());
+        Assert.That(customerType, Is.TypeOf<int>());
+        Assert.That(minOrder, Is.TypeOf<int>());
     }
 }
