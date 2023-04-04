@@ -4,7 +4,9 @@ using System.Threading;
 
 namespace TestProject2
 {
-    public class UnitTest12
+    
+[TestFixture(1, 2)]
+    public class UnitTest12(int a, int b)
     {
         [SetUp]
         public void Setup()
@@ -12,7 +14,7 @@ namespace TestProject2
         }
  //[Ignore("Ignore a test")]
         [Test]
-        public void Test1NunitSimplever1(a)()
+        public void Test1NunitSimplever1()
         {
             Thread.Sleep(11);
             Assert.Fail();
