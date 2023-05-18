@@ -94,10 +94,10 @@ object RunTests_4 : BuildType({
     }
 
     features {
-        parallelTests {
+        /*parallelTests {
             numberOfBatches = 2
             enabled=false
-        }
+        }*/
         commitStatusPublisher {
             publisher = github {
                 githubUrl = "https://api.github.com"
