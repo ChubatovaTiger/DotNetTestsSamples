@@ -72,7 +72,7 @@ object RunTests_4 : BuildType({
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
         script {
-            scriptContent = "ls gradle"
+            scriptContent = "ls"
         }
         dotnetTest {
             name = "New build step"
@@ -123,18 +123,6 @@ object RunTests_4 : BuildType({
         }
     }
 
-    dependencies {
-        snapshot(Dep) {
-        }
-        artifacts(Artdep) {
-            buildRule = lastSuccessful()
-            cleanDestination = true
-            artifactRules = """
-                a* => .
-                b* => .
-            """.trimIndent()
-        }
-    }
 
     requirements {
         contains("teamcity.agent.name", "Default")
