@@ -9,6 +9,7 @@ namespace TestProject2
         [SetUp]
         public void Setup()
         {
+            Console.WriteLine("a")
         }
 
 
