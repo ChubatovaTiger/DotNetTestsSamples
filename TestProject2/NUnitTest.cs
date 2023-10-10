@@ -9,7 +9,7 @@ namespace TestProject2
         [SetUp]
         public void Setup()
         {
-            Console.WriteLine("Hi from setup fixture");
+            Console.WriteLine("Hi from setup fixture 0");
         }
 
 
