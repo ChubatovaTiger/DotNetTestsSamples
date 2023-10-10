@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace TestProject2
 {
-    public class UnitTest12
+    public class UnitTest13aaaaaa116aaaaaaaaaa117aaaaaaaaaa118aaaaaaaaaa119aaaaaaaaaa20aaaaaaaaaa121aaaaaaaaaa22
     {
         [SetUp]
         public void Setup()
@@ -12,10 +12,10 @@ namespace TestProject2
         }
  //[Ignore("Ignore a test")]
         [Test]
-        public void Test1NunitSimplever1(()
+        public void Test1NunitSimplever1()
         {
-            Thread.Sleep(10);
-            Assert.Fail();
+            Thread.Sleep(60000);
+            Assert.Pass();
         }
         
          //[Ignore("Ignore a test")]
@@ -25,7 +25,7 @@ namespace TestProject2
         [TestCase("internet explorer", "11.0", "Windows 10")]
         public void Test2(string str1, string str2, string str3)
         {
-            Thread.Sleep(10);
+            Thread.Sleep(30);
             Assert.Pass();
         }
         
@@ -37,7 +37,7 @@ namespace TestProject2
          [Values(1,2,3)] int x,
         [Values("A","B")] string s)
         {
-            Thread.Sleep(10);
+            Thread.Sleep(40);
          Assert.Pass();
         }
 
@@ -48,7 +48,7 @@ public void NUnitRangeTest(
     [Values(1, 2, 3)] int x,
     [Range(0.2, 0.6, 0.2)] double d)
 {
-    Thread.Sleep(10);
+    Thread.Sleep(40);
     Assert.Pass();
 }
      
