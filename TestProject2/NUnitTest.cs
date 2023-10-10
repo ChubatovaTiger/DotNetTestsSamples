@@ -6,8 +6,10 @@ namespace TestProject2
 {
     public class UnitTest1
     {
-          [SetUp]
-   public void BaseSetUp() { /* ... */ } // Exception thrown!
+        [SetUp]
+        public void Setup()
+        {
+        }
 
 
  //[Ignore("Ignore a test")]
