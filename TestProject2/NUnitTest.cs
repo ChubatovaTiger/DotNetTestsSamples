@@ -11,7 +11,7 @@ namespace TestProject2
         {Console. WriteLine("a");
         }
         [TearDown]
-        public void Setup()
+        public void TearDown()
         {
         }
  //[Ignore("Ignore a test")]
