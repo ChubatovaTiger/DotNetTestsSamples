@@ -6,14 +6,11 @@ namespace TestProject2
 {
     public class UnitTest1
     {
-        [SetUp]
-        public void Setup()
-        {Console. WriteLine("a");
-        }
-        [TearDown]
-        public void TearDown()
-        {
-        }
+          [SetUp]
+   public void BaseSetUp() { /* ... */ } // Exception thrown!
+
+   [TearDown]
+   public void BaseTearDown() { /* ... */ }
  //[Ignore("Ignore a test")]
         [Test]
         public void Test1NunitSimplever1()
