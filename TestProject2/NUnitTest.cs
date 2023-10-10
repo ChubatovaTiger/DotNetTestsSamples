@@ -9,8 +9,7 @@ namespace TestProject2
           [SetUp]
    public void BaseSetUp() { /* ... */ } // Exception thrown!
 
-   [TearDown]
-   public void BaseTearDown() { /* ... */ }
+
  //[Ignore("Ignore a test")]
         [Test]
         public void Test1NunitSimplever1()
