@@ -8,7 +8,7 @@ namespace TestProject2
     {
         [SetUp]
         public void Setup()
-        {Console. WriteLine("a")
+        {Console. WriteLine("a");
         }
         [TearDown]
         public void Setup()
