@@ -8,6 +8,10 @@ namespace TestProject2
     {
         [SetUp]
         public void Setup()
+        {Console. WriteLine("a")
+        }
+        [TearDown]
+        public void Setup()
         {
         }
  //[Ignore("Ignore a test")]
