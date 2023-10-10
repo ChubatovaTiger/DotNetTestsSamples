@@ -9,6 +9,7 @@ namespace TestProject2
         [SetUp]
         public void Setup()
         {
+            Console.WriteLine("Hi from setup fixture 3");
         }
  //[Ignore("Ignore a test")]
         [Test]
