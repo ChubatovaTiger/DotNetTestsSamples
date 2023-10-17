@@ -5,7 +5,7 @@ using System.Linq;
 using System.Diagnostics.Contracts;
 using Xunit;
 
-kk
+
 namespace TestProject1
 {
 public class TestDataGenerator : IEnumerable<object[]>
