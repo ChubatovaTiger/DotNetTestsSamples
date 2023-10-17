@@ -1,5 +1,5 @@
 using NUnit.Framework;
-aa
+
 namespace TestProject2
 {
     public class NUnitTest1wthDisplN
