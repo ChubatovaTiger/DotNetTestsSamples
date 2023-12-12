@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 
 [TestFixture("hello", "hello", "goodbye")]
-[TestFixture("zip", "zip")]
+[TestFixture("zip", "zip2")]
 [TestFixture(42, 42, 9)]
 public class NUnitTest2
 {
