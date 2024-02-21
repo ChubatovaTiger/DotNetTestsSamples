@@ -29,6 +29,6 @@ private static bool IsFlakyTestPassed() => Random.NextDouble() > 0.5;
 [Fact] public void FlakyTest1()=> Assert.True(IsFlakyTestPassed());
 [Fact] public void FlakyTest2()=> Assert.True(IsFlakyTestPassed());
 [Fact] public void FlakyTest3()=> Assert.True(IsFlakyTestPassed());
-…
+
 }
 }
