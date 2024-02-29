@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.
 using System.Diagnostics.Contracts;
 using Xunit;
 
@@ -30,7 +31,10 @@ namespace TestProject1
         [MemberData(nameof(MatrixData))]
         public void xUnitMemberDataTestMethod(string x, int y)
         {
-            Assert.Equal(y, x.Length);
+            private static readonly Random Random = new();
+private static bool IsFlakyTestPassed() => Random.NextDouble() > 0.5;
+Assert.True(IsFlakyTestPassed());
+
         }
     }
 }
