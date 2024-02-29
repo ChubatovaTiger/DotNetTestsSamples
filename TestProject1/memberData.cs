@@ -26,16 +26,13 @@ namespace TestProject1
         public static int[] Numbers = { 42, 5, 6 };
         public static string[] Strings = { "Hello", "world!" };
         public static MatrixTheoryData<string, int> MatrixData = new MatrixTheoryData<string, int>(Strings, Numbers);
-
+        public static readonly Random Random = new();
+        public static bool IsFlakyTestPassed() => Random.NextDouble() > 0.5;
         [Theory]
         [MemberData(nameof(MatrixData))]
         public void xUnitMemberDataTestMethod(string x, int y)
         {
-           //private static readonly Random Random = new();
-///private static bool IsFlakyTestPassed() => Random.NextDouble() > 0.5;
-//Assert.True(IsFlakyTestPassed());
-             Assert.Equal(y, x.Length);
-
+         Assert.True(IsFlakyTestPassed());
         }
     }
 }
