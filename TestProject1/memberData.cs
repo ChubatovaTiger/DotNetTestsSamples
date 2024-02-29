@@ -31,9 +31,10 @@ namespace TestProject1
         [MemberData(nameof(MatrixData))]
         public void xUnitMemberDataTestMethod(string x, int y)
         {
-            private static readonly Random Random = new();
-private static bool IsFlakyTestPassed() => Random.NextDouble() > 0.5;
-Assert.True(IsFlakyTestPassed());
+           //private static readonly Random Random = new();
+///private static bool IsFlakyTestPassed() => Random.NextDouble() > 0.5;
+//Assert.True(IsFlakyTestPassed());
+             Assert.Equal(y, x.Length);
 
         }
     }
