@@ -46,7 +46,7 @@ object Dtnt : BuildType({
             id = "dotnet"
             projects = "dotnettests.sln"
             sdk = "8"
-            param("test.retry.maxRetries", "u")
+            param("test.retry.maxRetries", "%retrycount%")
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
     }
