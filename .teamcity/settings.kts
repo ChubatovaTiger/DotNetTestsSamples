@@ -34,7 +34,7 @@ object Dtnt : BuildType({
     name = "dtnt"
 
     params {
-        param("ok", "")
+        param("retrycount", "2")
     }
 
     vcs {
