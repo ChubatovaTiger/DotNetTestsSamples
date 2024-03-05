@@ -1,5 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetTest
+import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetBuild
 import jetbrains.buildServer.configs.kotlin.triggers.retryBuild
 
 /*
@@ -43,10 +43,9 @@ object Dtnt : BuildType({
     }
 
     steps {
-        dotnetTest {
+        dotnetBuild {
             id = "dotnet"
             projects = "dotnettests.sln"
-            maxRetries = 2
             sdk = "8"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
