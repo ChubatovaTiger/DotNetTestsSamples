@@ -33,6 +33,10 @@ project {
 object Dtnt : BuildType({
     name = "dtnt"
 
+    params {
+        param("ok", "")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
