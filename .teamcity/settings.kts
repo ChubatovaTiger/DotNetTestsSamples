@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetTest
+import jetbrains.buildServer.configs.kotlin.triggers.retryBuild
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -48,6 +49,13 @@ object Dtnt : BuildType({
             maxRetries = 2
             sdk = "8"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
+        }
+    }
+
+    triggers {
+        retryBuild {
+            branchFilter = ""
+            param("retryAttempts", "%retrycount%")
         }
     }
 })
