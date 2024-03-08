@@ -15,6 +15,7 @@ namespace TestProject3
         [DataRow( "Xx", "Yy")] 
         public void MSTestDataRowTestMethod2(string str1, string str2)
         {
+            Assert.AreEqual(10, 5 + 4); 
         }
     }
 }
