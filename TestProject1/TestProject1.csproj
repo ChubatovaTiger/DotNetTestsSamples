@@ -14,7 +14,7 @@
     <Message Text="No tests because this is a sample project" />
 </Target>
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
         <PackageReference Include="xunit" Version="2.4.1" />
         <PackageReference Include="coverlet.msbuild" Version="2.3.0" />
         
