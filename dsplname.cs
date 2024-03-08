@@ -6,7 +6,7 @@ namespace TestProject2
     {
 
 
-[TestCase(5)]
+[TestCase(5,TestName="dsplNameNUNitver1")]
 public void TestCasewithDsplMNameNunitver1() {
     Assert.AreEqual(5, 6);
 }
