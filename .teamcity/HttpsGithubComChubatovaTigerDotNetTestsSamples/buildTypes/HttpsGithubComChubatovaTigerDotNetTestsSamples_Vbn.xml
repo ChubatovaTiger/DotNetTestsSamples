@@ -12,7 +12,7 @@
           <param name="paths" value="TestProject2/TestProject2.csproj" />
           <param name="required.sdk" value="7" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="test.retry.maxRetries" value="%dsd%" />
+          <param name="test.retry.maxRetries" value="%dsd%%asd%" />
         </parameters>
       </runner>
     </build-runners>
