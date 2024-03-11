@@ -9,10 +9,11 @@
         <parameters>
           <param name="command" value="test" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="framework" value="ssdfsdf" />
           <param name="paths" value="TestProject2/TestProject2.csproj" />
           <param name="required.sdk" value="7" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="test.retry.maxRetries" value="%dsd%%asd%-ll" />
+          <param name="test.retry.maxRetries" value="100000" />
         </parameters>
       </runner>
     </build-runners>
