@@ -7,13 +7,15 @@
     <build-runners>
       <runner id="dotnet" name="" type="dotnet">
         <parameters>
-          <param name="command" value="test" />
+          <param name="command" value="vstest" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="framework" value="ssdfsdf" />
           <param name="paths" value="TestProject2/TestProject2.csproj" />
+          <param name="platform" value="auto" />
           <param name="required.sdk" value="7" />
           <param name="teamcity.step.mode" value="default" />
           <param name="test.retry.maxRetries" value="100000" />
+          <param name="vstest.version" value="VSTest_CrossPlatform" />
         </parameters>
       </runner>
     </build-runners>
