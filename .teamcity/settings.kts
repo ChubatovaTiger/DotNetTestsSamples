@@ -40,8 +40,9 @@ object Vbn : BuildType({
     steps {
         dotnetTest {
             id = "dotnet"
-            projects = "TestProject1/TestProject1.csproj"
+            projects = "TestProject2/TestProject2.csproj"
             sdk = "7"
+            param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
     }
 })
