@@ -45,7 +45,7 @@ object Vbn : BuildType({
         dotnetTest {
             id = "dotnet"
             projects = "TestProject2/TestProject2.csproj"
-            framework = "ssdfsdf"
+        
             maxRetries = "3"
             sdk = "7"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
