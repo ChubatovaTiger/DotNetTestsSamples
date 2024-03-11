@@ -44,7 +44,7 @@ object Vbn : BuildType({
             assemblies = "TestProject2/TestProject2.csproj"
             version = DotnetVsTestStep.VSTestVersion.CrossPlatform
             framework = "ssdfsdf"
-            maxRetries = "100000"
+            maxRetries = "%bla%"
             platform = DotnetVsTestStep.Platform.Auto
             sdk = "7"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
