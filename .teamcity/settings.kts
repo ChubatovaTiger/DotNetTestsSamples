@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetTest
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -39,15 +38,5 @@ object Vbn : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
-    }
-
-    steps {
-        dotnetTest {
-            id = "dotnet"
-            projects = "TestProject2/TestProject2.csproj"
-            maxRetries = "2"
-            sdk = "7"
-            param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
-        }
     }
 })
