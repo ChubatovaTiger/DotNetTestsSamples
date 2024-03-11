@@ -34,6 +34,7 @@ object Vbn : BuildType({
     name = "vbn"
 
     params {
+        param("avavava", "gh")
         param("bla", "3")
     }
 
