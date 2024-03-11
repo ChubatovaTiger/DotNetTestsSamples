@@ -39,4 +39,14 @@ object Vbn : BuildType({
     vcs {
         root(DslContext.settingsRoot)
     }
+
+    steps {
+        step {
+            id = "HttpsGithubComChubatovaTigerDotNetTestsSamples_VbnMR"
+            type = "HttpsGithubComChubatovaTigerDotNetTestsSamples_VbnMR"
+            executionMode = BuildStep.ExecutionMode.DEFAULT
+            param("teamcity.step.phase", "")
+            param("bla", "3")
+        }
+    }
 })
