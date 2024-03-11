@@ -34,6 +34,10 @@ project {
 object Vbn : BuildType({
     name = "vbn"
 
+    params {
+        param("bla", "3")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
