@@ -1,6 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.DotnetVsTestStep
-import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetVsTest
+import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetTest
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -43,13 +42,11 @@ object Vbn : BuildType({
     }
 
     steps {
-        dotnetVsTest {
+        dotnetTest {
             id = "dotnet"
-            assemblies = "TestProject2/TestProject2.csproj"
-            version = DotnetVsTestStep.VSTestVersion.CrossPlatform
+            projects = "TestProject2/TestProject2.csproj"
             framework = "ssdfsdf"
             maxRetries = "%bla%"
-            platform = DotnetVsTestStep.Platform.Auto
             sdk = "7"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
