@@ -20,7 +20,7 @@ namespace TestProject1
         [Fact]
         public void Test2()
         {
-			Assert.True();
+			Assert.True(false);
 			Thread.Sleep(5);
         }
     }
