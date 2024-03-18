@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace TestProject1
 {
-    public class UnitTest26
+    public class UnitTest26Clss1Clss2Clss3Clss4Clss5Clss6Clss7Clss8Clss9Clss10Clss11Clss12Clss13Clss14
     {
         [Fact]
         public void Test1()
@@ -18,9 +18,9 @@ namespace TestProject1
         }
 
         [Fact]
-        public void Test2()
+        public void Test2Tst1Tst2Tst3Tst4Tst5Tst6Tst7Tst8Tst9Tst10Tst11Tst12Tst13Tst14Tst15()
         {
-			Assert.False(false, "2");
+			Assert.True(false);
 			Thread.Sleep(500);
         }
     }
