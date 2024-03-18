@@ -13,7 +13,7 @@ namespace TestProject1
         [Fact]
         public void Test1()
         {
-			Assert.False(false, "1");
+			Assert.True(false);
 			 Thread.Sleep(500);
         }
 
