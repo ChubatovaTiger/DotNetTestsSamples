@@ -14,14 +14,14 @@ namespace TestProject1
         public void Test1()
         {
 			Assert.False(false, "1");
-			 Thread.Sleep(500);
+			 Thread.Sleep(5);
         }
 
         [Fact]
         public void Test2()
         {
-			Assert.False(false, "2");
-			Thread.Sleep(500);
+			Assert.True();
+			Thread.Sleep(5);
         }
     }
 }
