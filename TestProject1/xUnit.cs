@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics.Contracts;
 using Xunit;
+using System;
 using System.Threading;
 
 
@@ -17,10 +18,23 @@ namespace TestProject1
 			 Thread.Sleep(500);
         }
 
+
+       public static readonly Random Random = new();
+        public static bool IsFlakyTestPassed() => Random.NextDouble() > 0.5;
+
+
         [Fact]
         public void Test2Tst1Tst2Tst3Tst4Tst5Tst6Tst7Tst8Tst9Tst10Tst11Tst12Tst13Tst14Tst15()
         {
-			Assert.True(false);
+
+
+
+
+         Assert.True(IsFlakyTestPassed());
+
+
+
+			//Assert.True(false);
 			Thread.Sleep(500);
         }
     }
