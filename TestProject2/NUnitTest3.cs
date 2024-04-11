@@ -1,6 +1,8 @@
 using NUnit.Framework;
 using System;
 using System.Threading;
+using System.Collections; 
+
 
 [TestFixture(typeof(ArrayList))]
 [TestFixture(typeof(List<int>))]
