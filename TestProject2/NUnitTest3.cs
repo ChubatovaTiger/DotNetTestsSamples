@@ -2,28 +2,23 @@ using NUnit.Framework;
 using System;
 using System.Threading;
 
-[TestFixture(typeof(double), typeof(int), 100.0, 42)]
-[TestFixture(typeof(int), typeof(double), 42, 100.0)]
-public class NUnitTest3<T1, T2>
-    where T1 : notnull
-    where T2 : notnull
+[TestFixture(typeof(ArrayList))]
+[TestFixture(typeof(List<int>))]
+public class NUnitTest3<TList>
+    where TList : IList, new()
 {
-    private readonly T1 _t1;
-    private readonly T2 _t2;
+    private IList _list = null!;
 
-    public SpecifyBothSetsOfArgs(T1 t1, T2 t2)
+    [SetUp]
+    public void CreateList()
     {
-        _t1 = t1;
-        _t2 = t2;
+        _list = new TList();
     }
 
-    [TestCase(5, 7)]
-    public void TestMyArgTypes(T1 t1, T2 t2)
+    [Test]
+    public void CanAddToList()
     {
-        Assert.That(t1, Is.TypeOf<T1>());
-        Assert.That(t1, Is.LessThan(_t1));
-
-        Assert.That(t2, Is.TypeOf<T2>());
-        Assert.That(t2, Is.LessThan(_t2));
+        _list.Add(1); _list.Add(2); _list.Add(3);
+        Assert.That(_list, Has.Count.EqualTo(3));
     }
 }
