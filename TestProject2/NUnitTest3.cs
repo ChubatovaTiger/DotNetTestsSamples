@@ -22,6 +22,6 @@ public class NUnitTest3<TList>
     public void CanAddToList()
     {
         _list.Add(1); _list.Add(2); _list.Add(3);
-        Assert.That(_list, Has.Count.EqualTo(3));
+        Assert.That(_list, Has.Count.EqualTo(2));
     }
 }
