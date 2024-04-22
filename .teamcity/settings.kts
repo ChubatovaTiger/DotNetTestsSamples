@@ -47,7 +47,7 @@ object id87181_Subpr1_Pr1 : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "echo b1v"
+            scriptContent = "echo bmmm"
         }
     }
 
