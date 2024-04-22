@@ -37,7 +37,7 @@ object Project0_Project1_Build1 : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "echo cffjdj"
+            scriptContent = "echo cfdfjdj"
         }
     }
 })
