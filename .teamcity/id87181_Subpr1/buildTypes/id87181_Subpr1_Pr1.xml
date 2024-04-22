@@ -13,7 +13,7 @@
     <build-runners>
       <runner id="simpleRunner" name="" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="echo bmmm" />
+          <param name="script.content" value="echo bmmm0" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
