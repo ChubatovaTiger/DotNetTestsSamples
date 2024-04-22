@@ -12,4 +12,13 @@ changeBuildType(RelativeId("Build1")) {
     vcs {
         add(DslContext.settingsRoot.id!!)
     }
+
+    dependencies {
+        add(AbsoluteId("Project2_Bb")) {
+            snapshot {
+                reuseBuilds = ReuseBuilds.NO
+            }
+        }
+
+    }
 }
