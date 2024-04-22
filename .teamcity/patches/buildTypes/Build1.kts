@@ -9,6 +9,21 @@ To apply the patch, change the buildType with id = 'Build1'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Build1")) {
+    check(enablePersonalBuilds == true) {
+        "Unexpected option value: enablePersonalBuilds = $enablePersonalBuilds"
+    }
+    enablePersonalBuilds = false
+
+    check(type == BuildTypeSettings.Type.REGULAR) {
+        "Unexpected option value: type = $type"
+    }
+    type = BuildTypeSettings.Type.DEPLOYMENT
+
+    check(maxRunningBuilds == 0) {
+        "Unexpected option value: maxRunningBuilds = $maxRunningBuilds"
+    }
+    maxRunningBuilds = 1
+
     vcs {
         add(DslContext.settingsRoot.id!!)
     }
