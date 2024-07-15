@@ -4,7 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <LangVersion>preview</LangVersion>
-        <RestoreFallbackFolders>clear</RestoreFallbackFolders>
+        
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
