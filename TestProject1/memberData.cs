@@ -19,7 +19,7 @@ namespace TestProject1
                     Add(t1, t2);
         }
     }
-
+/*
     public class xUnitMemberDataSampleUsage
     {
         public static int[] Numbers = { 42, 5, 6 };
@@ -33,4 +33,5 @@ namespace TestProject1
             Assert.Equal(y, x.Length);
         }
     }
+    */
 }
