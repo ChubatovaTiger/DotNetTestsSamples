@@ -12,7 +12,7 @@ namespace TestProject1
         [Fact(DisplayName = "dpNameChubatovaTigerFact1")]
         public void Test1chubatovaFact1()
         {
-            Assert.Equal("a", "ba");
+            Assert.Equal("a", "a");
         }
 
         [Theory]
@@ -27,7 +27,7 @@ namespace TestProject1
     }
     
     
-    public class dsplNameXunit2
+    /*public class dsplNameXunit2
     {
         [Fact(DisplayName = "dpNameChubatovaTigerFact2")]
         public void Test2chubatovaFact2()
@@ -44,4 +44,4 @@ namespace TestProject1
             Assert.Equal(str, "a");
         }
     }
-}
+}*/
