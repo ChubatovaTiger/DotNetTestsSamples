@@ -12,7 +12,7 @@ namespace TestProject1
         [Fact(DisplayName = "dpNameChubatovaTigerFact1")]
         public void Test1chubatovaFact1()
         {
-            Assert.Equal("a", "a");
+            Assert.Equal("a", "b");
         }
 
         [Theory]
