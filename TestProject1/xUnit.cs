@@ -22,6 +22,7 @@ namespace TestProject1
         {
         }
     }
+    /*
     public class XUnitFlakyTests
 {
 // 50% success rate
@@ -32,4 +33,5 @@ private static bool IsFlakyTestPassed() => Random.NextDouble() > 0.5;
 [Fact] public void FlakyTest3()=> Assert.True(IsFlakyTestPassed());
 
 }
+*/
 }
