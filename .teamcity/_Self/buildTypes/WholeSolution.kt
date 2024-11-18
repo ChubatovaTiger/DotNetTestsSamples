@@ -40,7 +40,7 @@ object WholeSolution : BuildType({
 
     features {
         nugetCache {
-            enabled = false
+            //enabled = false
         }
     }
 
