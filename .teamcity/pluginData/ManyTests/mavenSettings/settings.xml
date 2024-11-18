@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+<servers>
+    <server>
+        <id>space-mavenchubatova</id>
+        <username>Nastasia.Chubatova</username>
+<password>eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiIxZ3ppNmoxMkM0cjkiLCJhdWQiOiJjaXJjbGV0LXdlYi11aSIsIm9yZ0RvbWFpbiI6ImpldGJyYWlucyIsIm5hbWUiOiJOYXN0YXNpYS5DaHViYXRvdmEiLCJpc3MiOiJodHRwczpcL1wvamV0YnJhaW5zLnRlYW0iLCJwZXJtX3Rva2VuIjoiNEs3VmFiNEFoVXFtIiwicHJpbmNpcGFsX3R5cGUiOiJVU0VSIiwiaWF0IjoxNzEwMTg1ODI0fQ.b1EMUDa7DuyPfDyK0ucEA1K5zZoNtUvACQ33O0ykshLPF1L-PCqyEKPf0JA8C_0uDIgwNxdAsdBljSD6jEI5BBfCHTPzEtgt_7bgvj6LZHpxP5sP0Y-PFl-YXoMcZvFMZkulPvXOhGcr0RlvY6-zhwBUtfjjqSu4gY83Cphpbdg</password>
+    </server>
+</servers>
+</settings> 
