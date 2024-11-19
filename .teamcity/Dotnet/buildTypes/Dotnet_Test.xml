@@ -24,6 +24,9 @@
       <extension id="dependencyCache.dotnet" type="dependencyCache.dotnet">
         <parameters />
       </extension>
+      <extension id="dependencyCache.Maven2" type="dependencyCache.Maven2">
+        <parameters />
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
