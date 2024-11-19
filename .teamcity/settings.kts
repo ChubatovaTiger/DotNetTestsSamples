@@ -67,6 +67,7 @@ object Test : BuildType({
             approvalRules = "user:admin"
         }
         gradleCache {
+            enabled = false
         }
     }
 })
