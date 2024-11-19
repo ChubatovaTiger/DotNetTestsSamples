@@ -61,6 +61,7 @@ object Test : BuildType({
         nugetCache {
         }
         mavenCache {
+            enabled = false
         }
         approval {
             approvalRules = "user:admin"
