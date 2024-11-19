@@ -33,7 +33,6 @@ project {
 
     buildType(Test11)
     buildType(Test)
-    buildType(Test_2)
     buildType(Test1)
 
     params {
@@ -99,31 +98,6 @@ object Test1 : BuildType({
 
 object Test11 : BuildType({
     name = "test (1) (1) (1)"
-
-    params {
-        param("env.NUGET_PACKAGES", "/Users/nastasia.chubatova/mu mu2")
-    }
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        dotnetTest {
-            id = "dotnet"
-            projects = "TestProject1/TestProject1.csproj"
-            sdk = "6"
-        }
-    }
-
-    features {
-        nugetCache {
-        }
-    }
-})
-
-object Test_2 : BuildType({
-    name = "test (1)"
 
     params {
         param("env.NUGET_PACKAGES", "/Users/nastasia.chubatova/mu mu2")
