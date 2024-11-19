@@ -3,6 +3,7 @@
   <name>dotnet</name>
   <parameters>
     <param name="teamcity.internal.depcache.buildFeature.dotnet.enabled" value="true" />
+    <param name="teamcity.internal.depcache.buildFeature.gradle.enabled" value="true" />
   </parameters>
   <project-extensions>
     <extension id="PROJECT_EXT_4" type="versionedSettings">
