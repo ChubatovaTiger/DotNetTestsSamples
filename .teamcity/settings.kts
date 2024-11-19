@@ -51,6 +51,7 @@ object Test : BuildType({
             id = "dotnet"
             projects = "TestProject1/TestProject1.csproj"
             sdk = "6"
+            dockerImage = "mcr.microsoft.com/dotnet/sdk:9.0"
         }
     }
 
