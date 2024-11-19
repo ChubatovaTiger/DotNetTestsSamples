@@ -33,6 +33,9 @@
           <param name="rules" value="user:admin" />
         </parameters>
       </extension>
+      <extension id="dependencyCache.gradle-runner" type="dependencyCache.gradle-runner">
+        <parameters />
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
