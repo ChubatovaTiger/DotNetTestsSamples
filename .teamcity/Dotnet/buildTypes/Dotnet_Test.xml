@@ -27,6 +27,12 @@
       <extension id="dependencyCache.Maven2" type="dependencyCache.Maven2">
         <parameters />
       </extension>
+      <extension id="approval-feature" type="approval-feature">
+        <parameters>
+          <param name="manualStartIsApproval" value="true" />
+          <param name="rules" value="user:admin" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
