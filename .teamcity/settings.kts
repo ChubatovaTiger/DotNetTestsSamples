@@ -31,7 +31,6 @@ version = "2024.07"
 
 project {
 
-    buildType(Test11)
     buildType(Test)
 
     params {
@@ -66,31 +65,6 @@ object Test : BuildType({
         }
         gradleCache {
             enabled = false
-        }
-    }
-})
-
-object Test11 : BuildType({
-    name = "test (1) (1) (1)"
-
-    params {
-        param("env.NUGET_PACKAGES", "/Users/nastasia.chubatova/mu mu2")
-    }
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        dotnetTest {
-            id = "dotnet"
-            projects = "TestProject1/TestProject1.csproj"
-            sdk = "6"
-        }
-    }
-
-    features {
-        nugetCache {
         }
     }
 })
