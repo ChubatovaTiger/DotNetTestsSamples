@@ -72,7 +72,7 @@ object BuildCopy : BuildType({
         dotnetTest {
             id = "dotnet"
             projects = "TestProject2/TestProject2.csproj"
-            sdk = "6"
+            sdk = "8"
         }
     }
 
