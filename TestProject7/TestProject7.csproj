@@ -14,7 +14,7 @@
     <Message Text="No tests because this is a sample project" />
 </Target>
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="PackageTiger" Version="500.0.14" />
     </ItemGroup>
 
 </Project>
