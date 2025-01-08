@@ -1,5 +1,5 @@
-import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.v2018_2.*
+import jetbrains.buildServer.configs.kotlin.v2018_2.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -23,21 +23,19 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2023.11"
+version = "2019.1"
 
 project {
 
-    buildType(Project0_Project1_Build1)
+    vcsRoot(HttpsGithubComChubatovaTigerGradleTests)
 }
 
-object Project0_Project1_Build1 : BuildType({
-    id("Build1")
-    name = "build1"
-
-    steps {
-        script {
-            id = "simpleRunner"
-            scriptContent = "echo cfdfjdllj"
-        }
+object HttpsGithubComChubatovaTigerGradleTests : GitVcsRoot({
+    name = "https://github.com/ChubatovaTiger/GradleTests"
+    url = "https://github.com/ChubatovaTiger/GradleTests"
+    useMirrors = false
+    authMethod = password {
+        userName = "ChubatovaTiger"
+        password = "credentialsJSON:135526e3-a683-4f85-942f-ba049923d60b"
     }
 })
