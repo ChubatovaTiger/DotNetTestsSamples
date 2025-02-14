@@ -33,6 +33,7 @@ object Project : Project({
         amazonEC2CloudImage {
             id = "PROJECT_EXT_122"
             profileId = "amazon-10006"
+            agentPoolId = "-2"
             name = "winRetryDotnet"
             vpcSubnetId = "subnet-043178c302cabfe37"
             keyPairName = "chubatova-amazon-ireland"
