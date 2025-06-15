@@ -4,8 +4,9 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <LangVersion>preview</LangVersion>
-  <RestoreSources>https://api.nuget.org/v3/index.json</RestoreSources>
-
+  <DebugType>portable</DebugType>
+  <DebugSymbols>true</DebugSymbols>
+<GenerateDocumentationFile>true</GenerateDocumentationFile>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
