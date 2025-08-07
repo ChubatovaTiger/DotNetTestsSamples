@@ -7,7 +7,7 @@ namespace TestProject2
 
 
 public void TestCasewithDsplMNameNunitver1() {
-    Assert.AreEqual(4, 4);
+    ClassicAssert.AreEqual(4, 2 + 2);
 }
 
         
