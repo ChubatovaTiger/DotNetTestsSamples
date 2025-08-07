@@ -8,7 +8,7 @@ namespace TestProject2
         [Test]
         public void Addition_ShouldReturnCorrectSum()
         {
-            Assert.AreEqual(5, 5);
+           Assert.That(2 + 2, Is.EqualTo(4));
         }
     }
 }
