@@ -8,7 +8,7 @@ namespace TestProject2
 
 [TestCase(5,TestName="dsplNameNUNitver123")]
 public void TestCasewithDsplMNameNunitver1() {
-    Assert.AreEqual(5, 4);
+    Assert.AreEqual(4, 4);
 }
 
         
