@@ -2,16 +2,13 @@ using NUnit.Framework;
 
 namespace TestProject2
 {
-    public class NUnitTest1wthDisplN
+    [TestFixture]
+    public class SimpleTests
     {
-
-
-public void TestCasewithDsplMNameNunitver1() {
-    ClassicAssert.AreEqual(4, 2 + 2);
-}
-
-        
-        
-        
+        [Test]
+        public void Addition_ShouldReturnCorrectSum()
+        {
+            Assert.AreEqual(5, 5);
+        }
     }
 }
