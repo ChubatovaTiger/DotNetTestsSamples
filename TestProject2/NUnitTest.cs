@@ -10,7 +10,7 @@ namespace TestProject2
         {
            Assert.That(2 + 2, Is.EqualTo(4));
         }
-        [Test]
+        [Test, Retry(2)]
 public void TestThatSometimesFails()
 {
     Assert.That(new Random().Next(0, 2) == 1);
