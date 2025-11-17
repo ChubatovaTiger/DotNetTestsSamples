@@ -36,7 +36,7 @@ object Project : Project({
             name = "winRetryDotnet"
             vpcSubnetId = "subnet-043178c302cabfe37"
             keyPairName = "chubatova-amazon-ireland"
-            instanceType = "t3.medium"
+            instanceType = "t3.small"
             securityGroups = listOf("sg-072d8bfa0626ea2a6")
             userScript = "echo 1 > a.txt"
             source = Source("ami-07a804dd17458af2e")
