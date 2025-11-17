@@ -52,6 +52,7 @@ object FlakyParametrized : BuildType({
         parallelTests {
             enabled = false
             numberOfBatches = 2
+            groupArtifactsByBuild = false
         }
     }
 })

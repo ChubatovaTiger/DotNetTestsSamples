@@ -34,6 +34,7 @@ object Net7SettingsFile : BuildType({
     features {
         parallelTests {
             numberOfBatches = 2
+            groupArtifactsByBuild = false
         }
     }
 })

@@ -1,7 +1,6 @@
 package _Self.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildFeatures.nugetCache
 import jetbrains.buildServer.configs.kotlin.buildSteps.DotnetTestStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetTest
 
@@ -26,7 +25,8 @@ object TestWholeSolution : BuildType({
     }
 
     features {
-        nugetCache {
+        feature {
+            type = "dependencyCache.dotnet"
         }
     }
 })

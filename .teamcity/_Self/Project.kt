@@ -33,11 +33,10 @@ object Project : Project({
         amazonEC2CloudImage {
             id = "PROJECT_EXT_122"
             profileId = "amazon-10006"
-            agentPoolId = "-2"
             name = "winRetryDotnet"
             vpcSubnetId = "subnet-043178c302cabfe37"
             keyPairName = "chubatova-amazon-ireland"
-            instanceType = "m2.xlarge"
+            instanceType = "t3.medium"
             securityGroups = listOf("sg-072d8bfa0626ea2a6")
             userScript = "echo 1 > a.txt"
             source = Source("ami-07a804dd17458af2e")
@@ -57,5 +56,6 @@ object Project : Project({
 
     subProject(Mstest100000.Project)
     subProject(SetupFixture.Project)
+    subProject(NUnitNew.Project)
     subProject(ManyTests.Project)
 })

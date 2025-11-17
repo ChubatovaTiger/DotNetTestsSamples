@@ -44,6 +44,7 @@ object Assembly : BuildType({
             id = "parallelTests"
             enabled = false
             numberOfBatches = 2
+            groupArtifactsByBuild = false
         }
     }
 })

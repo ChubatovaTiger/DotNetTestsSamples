@@ -1,7 +1,6 @@
 package _Self.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildFeatures.nugetCache
 import jetbrains.buildServer.configs.kotlin.buildFeatures.parallelTests
 import jetbrains.buildServer.configs.kotlin.buildSteps.DotnetMsBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.DotnetVsTestStep
@@ -76,6 +75,7 @@ object Vstest1 : BuildType({
             id = "parallelTests"
             enabled = false
             numberOfBatches = 2
+            groupArtifactsByBuild = false
         }
         matrix {
             id = "matrix"
@@ -84,9 +84,11 @@ object Vstest1 : BuildType({
                 value("1"),
                 value("2")
             ))
+            param("separateArtifacts", "false")
         }
-        nugetCache {
+        feature {
             id = "dependencyCache.dotnet"
+            type = "dependencyCache.dotnet"
         }
     }
 })

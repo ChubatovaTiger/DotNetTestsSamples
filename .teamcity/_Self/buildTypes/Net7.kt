@@ -48,6 +48,7 @@ object Net7 : BuildType({
         parallelTests {
             enabled = false
             numberOfBatches = 2
+            groupArtifactsByBuild = false
         }
     }
 })
